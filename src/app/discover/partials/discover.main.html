@@ -1,4 +1,15 @@
-<h1>Discover Page...</h1>
+<h1>This is the DISCOVER page</h1>
+<h3>Welcome {{ctrl.name}}</h3>
 
-<h3> Welcome {{ctrl.name}} </h3>
-
+  <div ng-if="!ctrl.displayTodos" ng-controller="SuperheroController as shCtrl">
+      <div  class="col-xs-6">
+        <h1>Photos List</h1>
+        <div ng-repeat="superhero in shCtrl.superheros">
+          <img ng-src="{{superhero.profileImage}}"><br>
+          <label>Name: </label><span ng-bind="superhero.name"></span><br>
+          <label>Description: </label><span ng-bind="superhero.description"></span><br>
+          <label>Store: </label><span ng-bind="superhero.store"></span><br>
+          <label>Price: </label><span ng-bind="superhero.price"></span><br>
+          <label>Gender: </label><span ng-bind="superhero.gender"></span><br>
+        </div>
+      </div>

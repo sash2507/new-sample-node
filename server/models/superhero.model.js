@@ -19,20 +19,12 @@ var SuperheroSchema = new Schema({
     type: String,
     trim: true
   },
-  description: {
-    type: String,
-    trim: true
-  },
   store: {
     type: String,
     trim: true
   },
   price: {
     type: Number,
-    trim: true
-  },
-  gender: {
-    type: String,
     trim: true
   }
 
