@@ -26,7 +26,6 @@ angular.module('template')
       self.superhero.profileImage = response.data.profileImage;
       self.superheros.push(superhero);
       self.superhero = {};
-      // console.log(superhero);
     });
   };
 })
