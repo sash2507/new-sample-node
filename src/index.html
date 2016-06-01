@@ -2,9 +2,27 @@
 <html ng-app="template">
   <head>
     <meta charset="utf-8">
-    <title>template</title>
+    <title>My awesome app!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDcn2e0VQvdIufFc2Poazzb2xuR3AEe5RI",
+    authDomain: "my-awesome-app-402ae.firebaseapp.com",
+    databaseURL: "https://my-awesome-app-402ae.firebaseio.com",
+    storageBucket: "my-awesome-app-402ae.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  firebase.database().ref("Submissions/").once('value', function(childSnapshot){
+     snapshot = childSnapshot.val();
+    });
+
+</script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -23,7 +41,7 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <acme-navbar></acme-navbar>
     <div ui-view></div>
 
     <!-- build:js(src) scripts/vendor.js -->

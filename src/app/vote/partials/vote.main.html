@@ -1,0 +1,32 @@
+<h1> Vote my Look </h1>
+<h3> Welcome {{ctrl.name}} </h3>
+
+<div ng-controller="VoteController">
+	<h1>Vote my look</h1>
+
+	<div ng-repeat="photos in ctrl.photos">
+		<img src={{photo.profileImage}}>
+		<span ng-bind={{photo.price}}></span>
+		<span ng-bind={{photo.store}}></span>
+		<input type="radio">Yes
+		<input type="radio">No
+		<button ng-click="ctrl.showUploadedPhoto()">Vote now!</button>
+	</div>
+
+</div>
+
+<div>
+	<li ng-repeat="photo in ctrl.photoList">
+		<span>photo here</span>
+		
+		<span ng-bind="photo.name"></span>
+		<span ng-bind="photo.store"></span>
+		<span ng-bind="photo.price"></span>
+		<input type="radio">Yes
+		<input type="radio">No
+		<button>Go!</button>
+	</li>
+</div>
+
+
+

@@ -1,0 +1,38 @@
+<h1>Upload your look</h1>
+
+<h3> Welcome {{ctrl.name}} </h3>
+
+<input type="file" ng-model="ctrl.photo">
+<input type="text" placeholder="name" ng-model="ctrl.photoName">
+<input type="text" placeholder="store">
+<input type="text" placeholder="price">
+<br>
+<button ng-click="ctrl.displayPhoto()">Upload</button>
+
+    <!-- Display Super Heros -->
+
+    <div ng-if="!ctrl.displayTodos" ng-controller="SuperheroController as shCtrl">
+      <div  class="col-xs-6">
+        <h1>Superheros List</h1>
+        <div ng-repeat="superhero in shCtrl.superheros">
+          <img ng-src="{{superhero.profileImage}}">
+          <label>Name: </label><span ng-bind="superhero.name"></span>
+        </div>
+      </div>
+        <div class="col-xs-6">
+          <h1>Add Superhero</h1>
+          <div>
+            <label>Name: </label><input type="text" ng-model="shCtrl.superhero.name"></input>
+          </div>
+          <div>
+          <input type="file" ngf-select ng-model="shCtrl.superhero.file">
+        </div>
+        
+        <div>
+            <button class="btn btn-primary" ng-click="shCtrl.addSuperhero(shCtrl.superhero)">Add</button>
+          </div>
+        </div>
+      </div> --> 
+            <!-- useing ngf-
+            select from the ng-file-upload library
+    <!--       

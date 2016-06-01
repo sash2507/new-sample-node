@@ -57,21 +57,24 @@
         <h1>Superheros List</h1>
         <div ng-repeat="superhero in shCtrl.superheros">
           <img ng-src="{{superhero.profileImage}}">
-          <label>Name: </label><span ng-bind="superhero.name"></span>
-          <label>Description: </label><span ng-bind="superhero.description"></span>
-          <label>Store: </label><span ng-bind="superhero.store"></span>
-          <label>Price: </label><span ng-bind="superhero.price"></span>
-          <label>Gender: </label><span ng-bind="superhero.gender"></span>
+         <p><label>Name: </label><span ng-bind="superhero.name"></span></p>
+         <!--  <label>Description: </label><span ng-bind="superhero.description"></span> -->
+          <p><label>Store: </label><span ng-bind="superhero.store"></span></p>
+          <p><label>Price: </label><span ng-bind="superhero.price"></span></p>
+         <!--  <label>Gender: </label><span ng-bind="superhero.gender"></span> -->
         </div>
       </div>
         <div class="col-xs-6">
           <h1>Add Superhero</h1>
           <div>
-            <label>Name: </label><input type="text" ng-model="shCtrl.superhero.name"></input>
-            <label>Description: </label><input type="text" ng-model="shCtrl.superhero.description"></input>
-            <label>Store: </label><input type="text" ng-model="shCtrl.superhero.store"></input>
-            <label>Price: </label><input type="text" ng-model="shCtrl.superhero.price"></input>
-            <label>Gender: </label><input type="text" ng-model="shCtrl.superhero.gender"></input>
+            <p><label>Name: </label><input type="text" ng-model="shCtrl.superhero.name"></input></p>
+            <p>{{shCtrl.superhero.name}}</p>
+           <!--  <label>Description: </label><input type="text" ng-model="shCtrl.superhero.description"></input> -->
+            <p><label>Store: </label><input type="text" ng-model="shCtrl.superhero.store"></input></p>
+            <p>{{shCtrl.superhero.store}}</p>
+            <p><label>Price: </label><input type="text" ng-model="shCtrl.superhero.price"></input></p>
+            <p>{{shCtrl.superhero.price}}</p>
+            <!-- <label>Gender: </label><input type="text" ng-model="shCtrl.superhero.gender"></input> -->
           </div>
           <div>
             <!-- useing ngf-select from the ng-file-upload library -->

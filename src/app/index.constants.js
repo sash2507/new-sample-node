@@ -2,6 +2,13 @@
   'use strict';
 
   angular
-    .module('template');
+    .module('template')
+    .constant('ALLPHOTOS', {
+    	kHomeState: 'home',
+		kVoteState: 'vote',
+		kUploadState: 'upload',
+		kDetailsState: 'details',
+		kDiscoverState: 'discover'
+	})
 
 })();

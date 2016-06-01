@@ -21,8 +21,9 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
-
+    function NavbarController(ALLPHOTOS) {
+      var self = this;
+      self.Photos = ALLPHOTOS;
     }
   }
 

@@ -4,6 +4,19 @@ angular.module('template')
 
 .controller('MainController', function() { 
   var self = this;
+  // var snapshot;
+
+  // self.addSuperhero = function(superhero) { 
+  //   alert(self.superhero.name);
+  //   alert(self.superhero.store);
+  //   alert(self.superhero.price);
+
+  // firebase.database().ref("Submissions/").push({
+  //   name: self.superhero.name,
+  //   store: self.superhero.store,
+  //   price: self.superhero.price
+  // })
+
   self.displayTodos = true;
   self.toggleView = function(showTodos) { 
     self.displayTodos = showTodos;
