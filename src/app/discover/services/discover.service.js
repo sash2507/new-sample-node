@@ -1,23 +1,22 @@
-// 'use strict';
+'use strict';
 
-// angular.module('template')
+angular.module('template')
 
-// // Create resource object
-// .factory('PhotoDetailsResource', function($resource) {
-// 	return $resource('/some/api/:someID');
-// })
+// Superhero resources
+.factory('SuperheroListResource', function($resource) {
+	return $resource('/api/getSuperheros');
+})
 
-// // Make GET request
-// .factory('DetailsDisplayService', function(Upload) {
-// 	return {
-// 		add: function(toAdd) {
-// 			return Upload.upload({
-// 				// the URL will change if no server-side/using firebase
-// 				url: '/api/addSuperhero',
-// 				method:'PUT',
-// 				data: {content: angular.toJson(toAdd)},
-// 				file: toAdd.file
-// 			});
-// 		}
-// 	};
-// });
+/* Upload service being injected is from the ng-file-upload library */
+.factory('SuperheroAddResource', function(addToPhotoList) {
+	return {
+		add: function(toList) {
+			return Upload.upload({
+				url: '/api/addSuperhero',
+				method:'GET',
+				data: {content: angular.toJson(toAdd)},
+				file: toList.file
+			});
+		}
+	};
+});

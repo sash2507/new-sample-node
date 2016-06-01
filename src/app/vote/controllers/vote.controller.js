@@ -1,39 +1,20 @@
 angular.module('MyApp.Vote')
 
 .controller('VoteController', function(ALLPHOTOS) {
-	var self = this;
-	
-	// function showUploadedPhoto(photo) {
-	// 	superheroAddResource.get()
-	// 	.$promise
-	// 	.then(function(response){
-	// 		self.photos = response.data;
-	// 	})
-	// }
+    var self = this;
+    self.name = "George";
+    self.Photos = ALLPHOTOS;
+    console.log("Vote Controller initialized"); 
+    self.upvote = 0;
+    self.downvote = 0;
 
-	self.name = "Saloni";
-	self.Photos = ALLPHOTOS;
-	console.log("Vote Controller initialized");
+    self.currentCount = 1;
+    self.voteUp = function() {
+    	self.upvote = self.upvote + self.currentCount;
+    }
 
-	// self.photoList = [{
-	// 	name: "skirt",
-	// 	store: "Topshop",
-	// 	price: "$50"
-	// }, {
-	// 	name: "blouse",
-	// 	store: "H&M",
-	// 	price: "$25"
-	// },
-	// {
-	// 	name: "sandals",
-	// 	store: "Barneys",
-	// 	price: "$250"
-	// },
-	// {
-	// 	name: "sneakers",
-	// 	store: "Nike",
-	// 	price: "$75"
-	// }];
-
-
-}) 
+    self.currentDownCount = 1;
+    self.voteDown = function() {
+        self.downvote = self.downvote + self.currentDownCount;
+    }
+})

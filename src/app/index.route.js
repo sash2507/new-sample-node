@@ -39,12 +39,17 @@
       controller: 'DetailsController as ctrl'
     })
 
-      .state(ALLPHOTOS.kDiscoverState, {
+    .state(ALLPHOTOS.kDiscoverState, {
       url: '/discover',
       templateUrl: 'app/discover/partials/discover.main.html',
       controller: 'DiscoverController as ctrl'
     })
 
+    .state(ALLPHOTOS.kContactState, {
+      url: '/contact',
+      templateUrl: 'app/contact/partials/contact.main.html',
+      controller: 'ContactController as ctrl'
+    })
 
     $urlRouterProvider.otherwise('/');
   }

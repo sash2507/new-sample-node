@@ -3,19 +3,14 @@
 
   angular
     .module('template', [
-    	// 'ngCookies',
-    	// 'ngSanitize',
-    	// 'ngMessages',
-    	'ngAnimate', 
-    	'ngResource', 
-    	'ui.router', 
-    	'ui.bootstrap',
-        'MyApp.Home',
-    	'MyApp.Vote',
-    	'MyApp.Upload',
-    	'MyApp.Details',
-    	'MyApp.Discover',
-        'ngFileUpload'
-    ]);
+        'ngAnimate', 
+        'ngResource', 
+        'ui.router', 
+        'ui.bootstrap', 
+        'ngFileUpload',
+        'MyApp.Vote',
+        'MyApp.Discover',
+        'MyApp.Contact'
+        ]);
 
 })();
